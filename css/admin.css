@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow-y: hidden;
+  display: flex;
+}
+
+.sideNav {
+  width: 200px;
+  height: 100%;
+  background-color: #eee;
+}
+.sideNav ul {
+  width: 100%;
+  margin-top: 70px;
+}
+.sideNav ul li {
+  width: 100%;
+  padding: 15px;
+  cursor: pointer;
+  color: blue;
+  font-weight: 700;
+}
+.sideNav ul li .category-lists {
+  width: 100%;
+  list-style: none;
+  margin-top: 5px;
+}
+.sideNav ul li .category-lists li {
+  margin-left: 10px;
+  padding: 5px;
+  color: rgb(48, 48, 202);
+  font-weight: 400;
+}
+.sideNav ul li .category-lists li:hover {
+  text-decoration: underline;
+}
+.sideNav ul li a {
+  text-decoration: none;
+  color: blue;
+  font-weight: 700;
+}
+.sideNav ul li a:hover {
+  color: skyblue;
+}
+.sideNav ul li:hover {
+  color: skyblue;
+}
+
+.rightContent {
+  width: calc(100% - 200px);
+  height: 100%;
+}
+
+.banner {
+  width: 100%;
+  height: 70px;
+  border-bottom: 1px solid #ddd;
+}
+.banner h1 {
+  padding: 15px 40px;
+  color: gray;
+}
+
+.content {
+  height: auto;
+  width: 100%;
+}
+
+.products-container,
+.category-container {
+  width: 90%;
+  margin: 15px auto;
+  padding: 10px;
+}
+.products-container table,
+.category-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+.products-container table td, .products-container table th,
+.category-container table td,
+.category-container table th {
+  border: 1px solid #ddd;
+  padding: 5px;
+}
+.products-container table th,
+.category-container table th {
+  background-color: #04AA6D;
+  color: #ffffff;
+}
+.products-container table .img,
+.category-container table .img {
+  text-align: center;
+}
+.products-container table .price,
+.category-container table .price {
+  text-align: right;
+  padding-right: 20px;
+}
+.products-container table img,
+.category-container table img {
+  width: 50px;
+  height: 30px;
+}
+.products-container table tr:nth-child(even),
+.category-container table tr:nth-child(even) {
+  background-color: #eee;
+}
+.products-container table tr:hover,
+.category-container table tr:hover {
+  background-color: #dddddd;
+}/*# sourceMappingURL=admin.css.map */
