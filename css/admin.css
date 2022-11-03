@@ -118,4 +118,74 @@
 .products-container table tr:hover,
 .category-container table tr:hover {
   background-color: #dddddd;
+}
+
+.category-container .btnAddnew {
+  padding: 10px 15px;
+  text-align: right;
+  display: inline-block;
+  background-color: green;
+  color: #eee;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: 600;
+}
+.category-container .btnAddnew:hover {
+  background-color: rgba(0, 128, 0, 0.859);
+}
+
+.categorynew-container {
+  width: 500px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  margin: 20px auto;
+  position: relative;
+}
+.categorynew-container div {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+.categorynew-container div .category {
+  padding: 10px;
+}
+.categorynew-container div .btn_add_category {
+  width: 150px;
+  margin: 5px auto;
+  padding: 10px;
+  cursor: pointer;
+}
+.categorynew-container .showall {
+  padding: 0;
+  text-align: right;
+}
+.categorynew-container .showall a {
+  text-decoration: none;
+  cursor: pointer;
+}
+.categorynew-container .showall a:hover {
+  text-decoration: underline;
+}
+.categorynew-container .category_added {
+  width: 100%;
+  margin: auto;
+  margin-top: 30px;
+  background-color: #eee;
+  padding: 20px;
+}
+.categorynew-container .category_added h3 {
+  color: rgba(0, 0, 0, 0.928);
+}
+.categorynew-container .category_added div {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+}
+
+.err_category {
+  color: red;
+  padding: 5px;
 }/*# sourceMappingURL=admin.css.map */

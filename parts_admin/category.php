@@ -4,6 +4,7 @@ $db=new Dbclass();
 ?>
 
 <div class="category-container">
+    <span class="btnAddnew">Add new</span>
     <table>
         <thead>
             <tr>
@@ -28,3 +29,7 @@ $db=new Dbclass();
         </thead>     
     </table>
 </div>
+
+
+
+<script src="scripts/main.js"></script>

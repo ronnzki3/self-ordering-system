@@ -74,6 +74,45 @@ $('#login').on('click',()=>{
 });
 
 
+$('.btnAddnew').on('click',()=>{
+    let page='parts_admin/category_new.php';
+    $('#content').load(page);
+});
+
+
+$('.showallcategory').on('click',()=>{
+    let page='parts_admin/category.php';
+    $('#content').load(page);
+});
+
+
+
+$('.btn_add_category').on('click',()=>{
+    let category=$('.category').val().trim();
+
+    if(category.length==0){
+        $('.err_category').html('Invalid empty field.');
+    }else{
+        $.ajax({
+            url:'parts_admin/category_insert.php',
+            type:'post',
+            data:{
+                'category':category,
+            },
+            success:function(data){
+                if(data==1){
+                    $('.newlyadded_category').html("Newly added category");
+                    $('.nodata_added').hide();
+                    $('.category_added').append('<div>'+category+'</div>');
+                    $('.category').val('');
+                }
+            }
+        });
+    }
+    
+});
 
 
 });
+
+
