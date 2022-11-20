@@ -521,6 +521,7 @@ $('.takeout').on('click',(e)=>{
     e.preventDefault();
      //load ProcessingDisplay() function, then after 5seconds ProcessingOrders() function to be called
      setTimeout(ProcessingDisplayOut,3000);   
+     setTimeout(DisplayTapScreen,60000); //hold for 60seconds
      $.modal.close();    
      $('#modalform_process').modal();  
 });
