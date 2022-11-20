@@ -32,6 +32,12 @@ class Dbclass{
     }
 
 
+    public function selectLastId($table){
+        $q="SELECT MAX(ID) as ID FROM $table"; 
+        $result = $this->conn->query($q); 
+        return $result;
+    }
+
 
     public function insert($table, $param = array()){
         $tableColumns = implode(',' , array_keys($param) );

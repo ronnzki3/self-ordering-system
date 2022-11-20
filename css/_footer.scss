@@ -1,8 +1,97 @@
 .footer{
     width: 100%;
-    height: 100px;
-    background-color: #ededed;
+    height: 300px;
+    background-color: black;
     position: fixed;
     bottom: 0;
-    z-index: 10;
+    z-index: 8;
+    display: flex;
+    flex-direction: column;
+    .footer-banner{
+        height: 50%;
+        width: 100%;
+        background-color: black;
+        background-image: url('../img-defs/banner-footer.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        -ms-background-size: cover; 
+        -o-background-size: cover;   
+        -moz-background-size: cover;   
+        -webkit-background-size: cover;
+        background-position: 100%;
+    }
+    .footer-wrapper{
+        width: 100%;
+        height: 100%;
+        font-size: 1.7rem;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        div{
+            width: 33.33%;
+            display: flex;
+            justify-items: center;
+            .span-cancel,.span-cart{
+                font-weight: 700;
+                padding: 20px 30px;
+                border: 1px solid #eee;
+                margin: auto;
+                text-align: center;
+                border-radius: 12px;
+                font-size: 1.3rem;
+                cursor: pointer;
+            }
+            .span-cancel{
+                color: orangered;
+            }
+            .span-cart{
+                color: whitesmoke;
+            }
+            .total-wrapper{
+                width: 250px;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-items: center;
+                align-items: center;
+                border: 1px solid gold;
+                padding: 10px;
+                margin: auto;
+                border-radius: 15px;
+
+                .span-total-text{
+                    font-size: 1.1rem;
+                    color: antiquewhite;
+                }
+                .span-total-amount{
+                    font-size: 3rem;
+                    font-weight: 800;
+                    color: whitesmoke;
+                }
+            }
+            .span-cart{
+                position: relative;
+                display: block;
+                .itemcount{
+                    position: absolute;
+                    top: -30px;
+                    right: -20px;
+                    font-size: 1.3rem;
+                    color: red;
+                    border-radius: 50%;
+                    width: 50px;
+                    text-align: center;
+                    height: 50px;
+                    line-height: 50px;
+                }
+                .bgblackkk{
+                    background-color: white;
+                }
+            }
+        }
+       
+        
+        
+    }
+    
 }

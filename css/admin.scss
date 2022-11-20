@@ -13,7 +13,8 @@
 .sideNav{
     width: 200px;
     height:100%;
-    background-color: #eee;
+    background-color: beige;
+    border-right: 1px solid #ccc;
 
     ul{
         width: 100%;
@@ -23,7 +24,7 @@
             width: 100%;
             padding: 15px;
             cursor: pointer;
-            color: blue;
+            color: gray;
             font-weight: 700;
 
             .category-lists{
@@ -34,7 +35,7 @@
                 li{                    
                    margin-left: 10px;
                     padding: 5px;
-                    color: rgb(48, 48, 202);
+                    color: gray;
                     font-weight: 400;
                 }
                 li:hover{
@@ -44,7 +45,7 @@
             }
             a{
                 text-decoration: none;
-                color: blue;
+                color: gray;
                 font-weight: 700;
             }
             a:hover{
@@ -62,18 +63,20 @@
 }
 .banner{
     width: 100%;
-    height: 70px;
+    height: 50px;
     // background-color: #ddd;
     border-bottom: 1px solid #ddd;
 
     h1{
         padding: 15px 40px;
         color: gray;
+        font-size: 1.5rem;
     }
 }
 .content{
-    height: auto;
+    height: 100%;
     width: 100%;
+    overflow-y: auto;
 }
 .products-container,
 .category-container{
@@ -85,14 +88,15 @@
         width: 100%;
         border-collapse: collapse;
         margin-top: 15px;
+        margin-bottom: 40px;
         
         td,th{
             border: 1px solid #ddd;
             padding: 5px;
         }        
         th{
-            background-color: #04AA6D;
-            color: #ffffff;
+            background-color: beige;
+            color: gray;
         }
         .img{
             text-align: center;
@@ -113,6 +117,26 @@
         }
     }
 }
+.products-container{
+
+    .addnew_btn{
+        text-align: right;
+
+        a{
+        padding: 10px 15px;
+        text-align: right;
+        background-color: lightseagreen;
+        color: #eee;
+        cursor: pointer;
+        border-radius: 5px;
+        font-weight: 600;
+        text-decoration: none;
+        }
+        a:hover{
+            color: lightgreen;
+        }
+    }
+}
 
 .category-container{  
 
@@ -120,14 +144,14 @@
         padding: 10px 15px;
         text-align: right;
         display: inline-block;
-        background-color: green;
+        background-color: lightseagreen;
         color: #eee;
         cursor: pointer;
         border-radius: 5px;
         font-weight: 600;
     }
     .btnAddnew:hover{
-        background-color: rgba(0, 128, 0, 0.859);
+        color: lightgreen;
     }
 }
 
@@ -140,9 +164,8 @@
     flex-direction: column;
     align-items: center;
     justify-items: center;
-    margin: 20px auto;
+    margin: 10px auto;
     position: relative;
-
 
     div{
         width: 80%;
@@ -153,11 +176,21 @@
             // width: 80%;
             padding: 10px;
         }        
-        .btn_add_category{
-            width: 150px;
+        .btn_add_category,
+        .btn_update_category{
             margin: 5px auto;
-            padding: 10px;
+            padding: 10px 40px;
+            font-size: 1rem;
+            background-color: skyblue;
+            color: white;
             cursor: pointer;
+            border-radius: 10px;
+        }
+        .btn_add_category:hover{
+            color: lightblue;
+        }
+        .btn_update_category:hover{
+            color: lightblue;
         }
     } 
     .showall{
@@ -193,3 +226,239 @@
     padding: 5px;
 }
 
+
+.productsnew-container{
+    width: 800px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    margin: 10px auto;
+    position: relative;
+    .forminputs{
+        border: 1px solid #ddd;
+        padding: 10px;
+        width: 500px;
+        margin: auto;
+        font-size: 1rem;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+        p{
+            padding: 10px;
+            width: 100%;
+            label{
+                width: 100%;
+                display: block;
+            }
+        }
+        .product,
+        .price{
+            padding: 10px;
+            font-size: 1rem;
+            width: 100%;
+        }
+        .uploaded_file{
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        .btn_add_products,
+        .btn_update_products{
+            padding: 10px 40px;
+            font-size: 1rem;
+            background-color: skyblue;
+            color: white;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        .btn_add_products:hover{
+            color: lightblue;
+        }
+        .btn_update_products:hover{
+            color: lightblue;
+        }
+    }
+    .showall{
+        width: 80%;
+        margin-top: 10px;
+        padding: 10px;
+        text-align: right;
+        a{
+            font-size: 1rem;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+    }
+    .products_added{
+        width: 100%;        
+        margin: auto;
+        margin-top: 10px;
+        // background-color: #eee;
+        padding: 10px;
+        
+        h3{
+            color: rgba(0, 0, 0, 0.928);
+        }
+        div{
+            padding:10px;
+            // border-bottom: 1px solid #ccc;
+            width: 100%;
+        }
+        table{
+            margin-top: 10px;
+            width: 100%;
+            margin-bottom: 40px;
+            border-collapse: collapse;
+            th{
+                text-align: left;
+                background-color: beige;
+                color: gray;
+                padding-left: 5px;
+            }
+            th,td{
+                border: 1px solid #ddd;
+            }
+            tr,td{
+                // border-bottom: 1px solid #ccc;
+                
+            }
+            td{
+                padding-left: 10px;
+                img{
+                    width: 50px;
+                }
+            }
+        }
+    }    
+}
+.catEdit{
+    font-size: .8rem;
+    color: whitesmoke;
+    background-color: lightseagreen;
+    text-decoration: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+.catEdit:hover{
+    text-decoration: underline;
+    background-color:lightgreen;
+    color:gray;
+}
+.catDelete{
+    font-size: .8rem;
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 5px 15px;
+    background-color: lightcoral;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+.catDelete:hover{
+    text-decoration: underline;
+    background-color:red;
+    color:gray;
+}
+.prod_edit{
+    font-size: .8rem;
+    color: whitesmoke;
+    background-color: lightseagreen;
+    text-decoration: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+.prod_edit:hover{
+    text-decoration: underline;
+    background-color:lightgreen;
+    color:gray;
+}
+.prod_del{
+    font-size: .8rem;
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 5px 15px;
+    background-color: lightcoral;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+.prod_del:hover{
+    text-decoration: underline;
+    background-color:red;
+    color:gray;
+}
+.err_category{
+    color: red;
+    padding: 5px;
+}
+
+.showprodcancel{
+    color: red;
+}
+.update-confirm{
+    font-size: 1rem;
+    color: blue;
+}
+.showall_display{
+    color:blue !important;
+}
+.newpic-hide{
+    visibility: hidden;
+}
+
+.modalBtnCancel,
+.modalBtnDelete {
+    padding:10px 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+}
+.modalBtnCancel{
+    background-color: lightcoral;
+    color:white;
+}
+.modalBtnDelete{
+    background-color: red;
+    color:white;
+    margin-left: 15px;
+}
+.modalBtnCancel:hover{
+    background-color: rgb(197, 101, 101);
+    color:white;
+}
+.modalBtnDelete:hover{
+    background-color: rgb(159, 5, 5);
+    color:white;
+    margin-left: 15px;
+}
+
+.modalBtnCancelC,
+.modalBtnDeleteC {
+    padding:10px 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+}
+.modalBtnCancelC{
+    background-color: lightcoral;
+    color:white;
+}
+.modalBtnDeleteC{
+    background-color: red;
+    color:white;
+    margin-left: 15px;
+}
+.modalBtnCancelC:hover{
+    background-color: rgb(197, 101, 101);
+    color:white;
+}
+.modalBtnDeleteC:hover{
+    background-color: rgb(159, 5, 5);
+    color:white;
+    margin-left: 15px;
+}

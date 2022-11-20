@@ -3,7 +3,7 @@ include '../Classes/Dbclass.php';
 $db=new Dbclass();
 
 
-$getId=$_POST['id'];
+$getId=$_GET['q'];
 $res=$db->select('tblcategory','*','ID='.$getId);
 $catname='';
 while($rw=mysqli_fetch_assoc($res)){
@@ -13,6 +13,8 @@ while($rw=mysqli_fetch_assoc($res)){
 
 <div class="products-container">
     <span>Category :</span> <h4 id="getCategory"><?=$catname;?></h2>
+
+    <div class='addnew_btn'><a href="#" id="btnaddNewProduct" class='<?=$getId;?>'>Add new</a></div>
     <table>
         <thead>
             <tr>
@@ -35,12 +37,17 @@ while($rw=mysqli_fetch_assoc($res)){
                     $price=$row['price'];
                     $image=$row['image'];
                     $imageLoc='images/';
+                    $productId=$row['ID'];
                 ?>
                     <tr>
                         <td><?=$productname;?></td>
                         <td class='price'><?=$price?></td>
                         <td class='img'><img src="<?=$imageLoc.$image;?>" alt=""></td>
-                        <td><a href="#">Edit</a> <a href="#">Delete</a></td>
+                        <td style="text-align:center;">
+                            <input type="hidden" class="category_id" value="<?=$row['category_id']?>">
+                            <a href="#" class="prod_edit" id="prod_edit_<?=$productId?>">Edit</a> 
+                            <a href="#" class="prod_del" id="prod_del_<?=$productId?>">Delete</a>
+                        </td>
                     </tr>
                 <?php
                 }
@@ -49,3 +56,5 @@ while($rw=mysqli_fetch_assoc($res)){
         </thead>     
     </table>
 </div>
+
+<!-- <script src="scripts/main.js"></script> -->

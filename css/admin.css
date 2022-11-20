@@ -15,7 +15,8 @@
 .sideNav {
   width: 200px;
   height: 100%;
-  background-color: #eee;
+  background-color: beige;
+  border-right: 1px solid #ccc;
 }
 .sideNav ul {
   width: 100%;
@@ -25,7 +26,7 @@
   width: 100%;
   padding: 15px;
   cursor: pointer;
-  color: blue;
+  color: gray;
   font-weight: 700;
 }
 .sideNav ul li .category-lists {
@@ -36,7 +37,7 @@
 .sideNav ul li .category-lists li {
   margin-left: 10px;
   padding: 5px;
-  color: rgb(48, 48, 202);
+  color: gray;
   font-weight: 400;
 }
 .sideNav ul li .category-lists li:hover {
@@ -44,7 +45,7 @@
 }
 .sideNav ul li a {
   text-decoration: none;
-  color: blue;
+  color: gray;
   font-weight: 700;
 }
 .sideNav ul li a:hover {
@@ -61,17 +62,19 @@
 
 .banner {
   width: 100%;
-  height: 70px;
+  height: 50px;
   border-bottom: 1px solid #ddd;
 }
 .banner h1 {
   padding: 15px 40px;
   color: gray;
+  font-size: 1.5rem;
 }
 
 .content {
-  height: auto;
+  height: 100%;
   width: 100%;
+  overflow-y: auto;
 }
 
 .products-container,
@@ -85,6 +88,7 @@
   width: 100%;
   border-collapse: collapse;
   margin-top: 15px;
+  margin-bottom: 40px;
 }
 .products-container table td, .products-container table th,
 .category-container table td,
@@ -94,8 +98,8 @@
 }
 .products-container table th,
 .category-container table th {
-  background-color: #04AA6D;
-  color: #ffffff;
+  background-color: beige;
+  color: gray;
 }
 .products-container table .img,
 .category-container table .img {
@@ -120,18 +124,35 @@
   background-color: #dddddd;
 }
 
+.products-container .addnew_btn {
+  text-align: right;
+}
+.products-container .addnew_btn a {
+  padding: 10px 15px;
+  text-align: right;
+  background-color: lightseagreen;
+  color: #eee;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.products-container .addnew_btn a:hover {
+  color: lightgreen;
+}
+
 .category-container .btnAddnew {
   padding: 10px 15px;
   text-align: right;
   display: inline-block;
-  background-color: green;
+  background-color: lightseagreen;
   color: #eee;
   cursor: pointer;
   border-radius: 5px;
   font-weight: 600;
 }
 .category-container .btnAddnew:hover {
-  background-color: rgba(0, 128, 0, 0.859);
+  color: lightgreen;
 }
 
 .categorynew-container {
@@ -141,7 +162,7 @@
   flex-direction: column;
   align-items: center;
   justify-items: center;
-  margin: 20px auto;
+  margin: 10px auto;
   position: relative;
 }
 .categorynew-container div {
@@ -152,11 +173,21 @@
 .categorynew-container div .category {
   padding: 10px;
 }
-.categorynew-container div .btn_add_category {
-  width: 150px;
+.categorynew-container div .btn_add_category,
+.categorynew-container div .btn_update_category {
   margin: 5px auto;
-  padding: 10px;
+  padding: 10px 40px;
+  font-size: 1rem;
+  background-color: skyblue;
+  color: white;
   cursor: pointer;
+  border-radius: 10px;
+}
+.categorynew-container div .btn_add_category:hover {
+  color: lightblue;
+}
+.categorynew-container div .btn_update_category:hover {
+  color: lightblue;
 }
 .categorynew-container .showall {
   padding: 0;
@@ -188,4 +219,253 @@
 .err_category {
   color: red;
   padding: 5px;
+}
+
+.productsnew-container {
+  width: 800px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  margin: 10px auto;
+  position: relative;
+}
+.productsnew-container .forminputs {
+  border: 1px solid #ddd;
+  padding: 10px;
+  width: 500px;
+  margin: auto;
+  font-size: 1rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.productsnew-container .forminputs p {
+  padding: 10px;
+  width: 100%;
+}
+.productsnew-container .forminputs p label {
+  width: 100%;
+  display: block;
+}
+.productsnew-container .forminputs .product,
+.productsnew-container .forminputs .price {
+  padding: 10px;
+  font-size: 1rem;
+  width: 100%;
+}
+.productsnew-container .forminputs .uploaded_file {
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.productsnew-container .forminputs .btn_add_products,
+.productsnew-container .forminputs .btn_update_products {
+  padding: 10px 40px;
+  font-size: 1rem;
+  background-color: skyblue;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.productsnew-container .forminputs .btn_add_products:hover {
+  color: lightblue;
+}
+.productsnew-container .forminputs .btn_update_products:hover {
+  color: lightblue;
+}
+.productsnew-container .showall {
+  width: 80%;
+  margin-top: 10px;
+  padding: 10px;
+  text-align: right;
+}
+.productsnew-container .showall a {
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+.productsnew-container .showall a:hover {
+  text-decoration: underline;
+}
+.productsnew-container .products_added {
+  width: 100%;
+  margin: auto;
+  margin-top: 10px;
+  padding: 10px;
+}
+.productsnew-container .products_added h3 {
+  color: rgba(0, 0, 0, 0.928);
+}
+.productsnew-container .products_added div {
+  padding: 10px;
+  width: 100%;
+}
+.productsnew-container .products_added table {
+  margin-top: 10px;
+  width: 100%;
+  margin-bottom: 40px;
+  border-collapse: collapse;
+}
+.productsnew-container .products_added table th {
+  text-align: left;
+  background-color: beige;
+  color: gray;
+  padding-left: 5px;
+}
+.productsnew-container .products_added table th, .productsnew-container .products_added table td {
+  border: 1px solid #ddd;
+}
+.productsnew-container .products_added table td {
+  padding-left: 10px;
+}
+.productsnew-container .products_added table td img {
+  width: 50px;
+}
+
+.catEdit {
+  font-size: 0.8rem;
+  color: whitesmoke;
+  background-color: lightseagreen;
+  text-decoration: none;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+
+.catEdit:hover {
+  text-decoration: underline;
+  background-color: lightgreen;
+  color: gray;
+}
+
+.catDelete {
+  font-size: 0.8rem;
+  color: whitesmoke;
+  text-decoration: none;
+  padding: 5px 15px;
+  background-color: lightcoral;
+  margin-left: 10px;
+  border-radius: 5px;
+}
+
+.catDelete:hover {
+  text-decoration: underline;
+  background-color: red;
+  color: gray;
+}
+
+.prod_edit {
+  font-size: 0.8rem;
+  color: whitesmoke;
+  background-color: lightseagreen;
+  text-decoration: none;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+
+.prod_edit:hover {
+  text-decoration: underline;
+  background-color: lightgreen;
+  color: gray;
+}
+
+.prod_del {
+  font-size: 0.8rem;
+  color: whitesmoke;
+  text-decoration: none;
+  padding: 5px 15px;
+  background-color: lightcoral;
+  margin-left: 10px;
+  border-radius: 5px;
+}
+
+.prod_del:hover {
+  text-decoration: underline;
+  background-color: red;
+  color: gray;
+}
+
+.err_category {
+  color: red;
+  padding: 5px;
+}
+
+.showprodcancel {
+  color: red;
+}
+
+.update-confirm {
+  font-size: 1rem;
+  color: blue;
+}
+
+.showall_display {
+  color: blue !important;
+}
+
+.newpic-hide {
+  visibility: hidden;
+}
+
+.modalBtnCancel,
+.modalBtnDelete {
+  padding: 10px 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+}
+
+.modalBtnCancel {
+  background-color: lightcoral;
+  color: white;
+}
+
+.modalBtnDelete {
+  background-color: red;
+  color: white;
+  margin-left: 15px;
+}
+
+.modalBtnCancel:hover {
+  background-color: rgb(197, 101, 101);
+  color: white;
+}
+
+.modalBtnDelete:hover {
+  background-color: rgb(159, 5, 5);
+  color: white;
+  margin-left: 15px;
+}
+
+.modalBtnCancelC,
+.modalBtnDeleteC {
+  padding: 10px 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+}
+
+.modalBtnCancelC {
+  background-color: lightcoral;
+  color: white;
+}
+
+.modalBtnDeleteC {
+  background-color: red;
+  color: white;
+  margin-left: 15px;
+}
+
+.modalBtnCancelC:hover {
+  background-color: rgb(197, 101, 101);
+  color: white;
+}
+
+.modalBtnDeleteC:hover {
+  background-color: rgb(159, 5, 5);
+  color: white;
+  margin-left: 15px;
 }/*# sourceMappingURL=admin.css.map */

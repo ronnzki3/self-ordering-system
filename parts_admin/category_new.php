@@ -2,16 +2,6 @@
 include '../Classes/Dbclass.php';
 $db=new Dbclass();
 ?>
-<style>
-/* .category_added{
-    width: 500px;
-    margin-top: 300px;
-    margin: auto;
-}   
-.category_added h3{
-        color: red !important;
-} */
-</style>
 
 <div class="categorynew-container">
     <div class='bgdiv'>

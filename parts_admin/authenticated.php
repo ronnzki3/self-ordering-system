@@ -6,5 +6,5 @@ $_SESSION['auth']=1;
 
 
 
-header('Location: ../admin.php');
+header('Location: ../admin.php?q=h');
 exit;
